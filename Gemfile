@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 #gem "github-pages", group: :jekyll_plugins
-gem "jekyll", "~> 3.7"
+gem "jekyll", "~> 4.3.1"
 gem "minimal-mistakes-jekyll"
 gem "kramdown-parser-gfm"
 
@@ -13,9 +13,14 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-gist"
-  gem "jekyll-feed"
+  gem "jekyll-feed", "~> 0.12"
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
   gem "jekyll-data"
+  gem "jekyll-remote-theme"
 end
+
+# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
+# do not have a Java counterpart.
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
