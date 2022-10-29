@@ -2,6 +2,19 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: splash
 author_profile: true
+hidden: true
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/circuit-background.jpeg
+feature_row:
+  - image_path: /assets/images/small_logo.png
+    alt: "customizable"
+    title: "Super customizable"
+    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
+  - alt: "some alt text"
+    title: "some title text"
+    excerpt: " excerpt text here"
 ---
+{% include feature_row %}
